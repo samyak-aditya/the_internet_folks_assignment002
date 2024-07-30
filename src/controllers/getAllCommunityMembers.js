@@ -56,7 +56,7 @@ export const getAllCommunity = async (req, res) => {
     const { id } = req.params; // Retrieve the community name from the dynamic parameter
   
     // Find the community based on the name
-    const community = await Community.findOne({ slug: id });7
+    const community = await Community.findOne({ slug: id });
     
     if (!community) {
       return res.status(404).json({ message: 'Community not found' });
